@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --main-padding: 2em;
+  --main-br: 5px;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  background-color: var(--light-gray);
+  padding: 2em;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main>div {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main {
+  max-width: 550px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 10%);
+  border-radius: var(--main-br);
+  overflow: hidden;
+}
+
+@media (min-width: 576px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.intro {
+  grid-column: 1 / -1;
+  background-color: white;
+  padding: var(--main-padding);
+}
+
+.intro h1 {
+  margin-top: 0px;
+  margin-bottom: 1em;
+  font-size: 1.25rem;
+  color: var(--cyan);
+}
+
+.intro span {
+  color: var(--bright-yellow);
+  font-weight: 700;
+}
+
+.intro p {
+  color: var(--grayish-blue);
+  line-height: 1.6;
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+
+.subscription-info {
+  padding: var(--main-padding);
+  background-color: var(--cyan);
+}
+
+.subscription-info h2 {
+  color: var(--light-gray);
+  font-size: 1.0625rem;
+  margin-top: 0;
+}
+
+.subscription-info .price {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.875rem;
+  color: #f2ffff;
+}
+
+.subscription-info .price span {
+  margin-left: 0.5em;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #7bdee3;
+}
+
+.subscription-info .main-feature {
+  display: block;
+  color: var(--light-gray);
+  margin-top: 0.5em;
+  font-size: 0.8125rem;
+}
+
+.subscription-info .main-feature span {
+  font-weight: 700;
+}
+
+.subscription-info a {
+  display: block;
+  background-color: var(--bright-yellow);
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.8em 0;
+  margin-top: 2em;
+  border-radius: var(--main-br);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 20%);
+}
+
+.subscription-features {
+  background-color: #4abebd;
+  padding: var(--main-padding);
+}
+
+.subscription-features h2 {
+  color: white;
+  margin-top: 0;
+  font-size: 1.0625rem;
+}
+
+.subscription-features li {
+  color: #abfbfb;
+  padding: 0.1em 0;
+  font-size: 0.875rem;
+}
